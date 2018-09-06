@@ -1,0 +1,35 @@
+img
+{
+	max-width: 40%;
+	max-height: 40%;
+}
+img:hover{
+	border-radius: 40%;
+	border: 5px solid red;
+}
+p{
+	height: 5px;
+}
+p.longsentence{
+	height: 1000px;
+}
+a:link
+{
+	color: blue;
+}
+a:hover
+{
+	color: red;
+}
+a:visited{
+	color: brown;
+}
+a:active{
+	color: green;
+}
+b.currency::before{
+	content: "học phí ";
+}
+b.currency::after{
+	content: " VND";
+}
