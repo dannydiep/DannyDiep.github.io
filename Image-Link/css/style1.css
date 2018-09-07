@@ -1,0 +1,54 @@
+
+h1
+{
+	text-align: center;
+}
+
+.imgHomepage
+{
+	max-width: 300px;
+}
+.imgExternalPage
+{
+	max-width: 500px;
+}
+b.price::after
+{
+	content: "K";
+}
+
+a:link
+{
+	color: blue;
+}
+a:visited
+{
+	color: 355a1b;
+}
+
+a:hover
+{
+	color: blue;
+}
+
+a:active{
+	color: red;
+}
+/*img:hover{
+	border-radius: 40%;
+	border: 5px solid red;
+}
+p{
+	height: 5px;
+}
+p.longsentence{
+	height: 1000px;
+}
+
+b.currency::before{
+	content: "học phí ";
+}
+b.currency::after{
+	content: " VND";
+}
+*/
