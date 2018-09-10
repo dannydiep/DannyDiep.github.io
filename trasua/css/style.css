@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+#main-menu a{
+	font-size: 20px;
+	color: gray;
+	padding: 10px;
+	margin: 10px;
+}
+.wrap{
+	max-width: 1000px;
+	margin: auto;
+}
+
+body{
+	background-color: skyblue;
+}
+
+
+.container{
+	max-width: 1000px;
+	margin: auto;
+	overflow: auto;
+}
+.gallery{
+	border:5px solid pink;
+	float: left;
+	width: 300px;
+}
+.gallery img{
+	width: 100%;
+	height: auto;
+}
+.imageTitle{
+	padding: 5px;
+	text-align: center;
+}
+img:hover{
+	border-radius: 50%;
+}
+
+
+a:link{
+	text-decoration: none;
+}

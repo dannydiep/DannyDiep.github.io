@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+@keyframes title {
+    0%  {background-color: #EF7126; color: #F9E559;}
+    25%  {background-color: #6F3662; color: #FFFFFF;}
+    50%  {background-color: #9F6164; color: #F8DEBD;}
+    75%  {background-color: #44B3C2; color: #FFFFFF;}
+    100% {background-color: #218C8D; color: #F9E559;}
+}
+@keyframes movecredit {
+    from {
+    	left: 950px;
+    	opacity: 1;}
+    to {
+    	left: 10px;
+    	opacity: 0;}
+    0%  {color: green;}
+    15%  {color: pink;}
+    25%  {color: red;}
+    40%  {color: gray;}
+    50%  {color: orange;}
+    60%  {color: green;}
+    75%  {color: purple;}
+    90%  {color: red;}
+    100% {color: blue;}
+}
+
+h1{
+	font-size: 30px;
+	text-align: center;
+	font-family: Arial;
+	text-transform: uppercase;
+	animation: title 6s ease-in infinite;
+
+}
+.wrap{
+	max-width: 1000px;
+	margin: auto;
+}
+
+.col{
+	width: 33.3333333%;
+	position: relative;	
+	float: left;
+	padding: 15px;
+}
+.gallery{
+	padding: 1px;
+	cursor: not-allowed;
+	overflow: hidden;
+}
+.gallery img{
+	max-height: 170px;
+	vertical-align: middle;
+	transition: opacity 0.5s linear;
+}
+.gallery:hover img{
+	opacity: 0.6;
+	transform: scale(1.5);
+}
+.credit{
+	width: 100px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    animation: movecredit 9s ease-in infinite;
+}
+
