@@ -8,13 +8,30 @@
     75%  {background-color: #44B3C2; color: #FFFFFF;}
     100% {background-color: #218C8D; color: #F9E559;}
 }
-@keyframes movecredit {
+@keyframes movename {
     from {
     	left: 950px;
     	opacity: 1;}
     to {
+    	left: 460px;
+    	opacity: 0;}
+    0%  {color: green;}
+    15%  {color: pink;}
+    25%  {color: red;}
+    40%  {color: gray;}
+    50%  {color: orange;}
+    60%  {color: green;}
+    75%  {color: purple;}
+    90%  {color: red;}
+    100% {color: blue;}
+}
+@keyframes movecredit {
+    from {
     	left: 10px;
     	opacity: 0;}
+    to {
+    	left: 395px;
+    	opacity: 1;}
     0%  {color: green;}
     15%  {color: pink;}
     25%  {color: red;}
@@ -59,11 +76,18 @@ h1{
 	opacity: 0.6;
 	transform: scale(1.5);
 }
+.creditname{
+	width: 100px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    animation: movename 5s ease-in infinite;
+}
 .credit{
 	width: 100px;
     height: 50px;
     font-weight: bold;
     position: relative;
-    animation: movecredit 9s ease-in infinite;
+    animation: movecredit 5s ease-in infinite;
 }
 
