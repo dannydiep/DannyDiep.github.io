@@ -1,5 +1,32 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+}
+.menu {
+    list-style-type: none;
+    padding: 3px;
+    background-color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 35px;
+    height: 40px;
+    font-family: arial;
+}
+.menu a:link{
+    text-decoration: none;
+    padding: 10px;
+    color: #3e3e3e;
+
+
+}
+.menu > li {
+    float: left;
+}
+.menu > li > ul {
+    list-style-type: none;
+    display: none;
+}
+.menu > li:hover > ul {
+    display: block;
 }
 @keyframes title {
     0%  {background-color: #EF7126; color: #F9E559;}
@@ -10,11 +37,11 @@
 }
 @keyframes movename {
     from {
-    	left: 950px;
-    	opacity: 1;}
+        left: 950px;
+        opacity: 1;}
     to {
-    	left: 460px;
-    	opacity: 0;}
+        left: 460px;
+        opacity: 0;}
     0%  {color: green;}
     15%  {color: pink;}
     25%  {color: red;}
@@ -27,11 +54,11 @@
 }
 @keyframes movecredit {
     from {
-    	left: 10px;
-    	opacity: 0;}
+        left: 10px;
+        opacity: 0;}
     to {
-    	left: 395px;
-    	opacity: 1;}
+        left: 395px;
+        opacity: 1;}
     0%  {color: green;}
     15%  {color: pink;}
     25%  {color: red;}
@@ -44,49 +71,46 @@
 }
 
 h1{
-	font-size: 30px;
-	text-align: center;
-	font-family: Arial;
-	text-transform: uppercase;
-	animation: title 6s ease-in infinite;
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial;
+    text-transform: uppercase;
+    animation: title 6s ease-in infinite;
 
 }
 .wrap{
-	max-width: 1000px;
-	margin: auto;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .col{
-	width: 33.3333333%;
-	position: relative;	
-	float: left;
-	padding: 15px;
+    width: 33.3333333%;
+    position: relative; 
+    float: left;
+    padding: 15px;
 }
 .gallery{
-	padding: 1px;
-	cursor: not-allowed;
-	overflow: hidden;
+    padding: 1px;
+    cursor: not-allowed;
+    overflow: hidden;
 }
 .gallery img{
-	max-height: 170px;
-	vertical-align: middle;
-	transition: opacity 0.5s linear;
-}
-.gallery:hover img{
-	opacity: 0.6;
-	transform: scale(1.5);
+    max-height: 170px;
+    vertical-align: middle;
+    transition: opacity 0.5s linear;
 }
 .creditname{
-	width: 100px;
+    width: 100px;
     height: 50px;
     font-weight: bold;
     position: relative;
     animation: movename 5s ease-in infinite;
 }
 .credit{
-	width: 100px;
+    width: 100px;
     height: 50px;
     font-weight: bold;
     position: relative;
     animation: movecredit 5s ease-in infinite;
 }
+
