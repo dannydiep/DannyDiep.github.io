@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+.wrap{
+    max-width: 1000px;
+    margin: auto;
+}
 .menu {
     list-style-type: none;
     padding: 3px;
@@ -15,8 +19,9 @@
     text-decoration: none;
     padding: 10px;
     color: #3e3e3e;
-
-
+}
+.menu a:hover{
+    background-color: #786B8C;
 }
 .menu > li {
     float: left;
@@ -27,7 +32,129 @@
 }
 .menu > li:hover > ul {
     display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
 }
+
+@keyframes slider {
+
+0% {
+    left: 0;
+}
+
+20% {
+    left: 0;
+}
+
+25% {
+    left: -100%;
+}
+
+45% {
+    left: -100%;
+
+}
+
+50% {
+        left: -200%;
+
+}
+
+70% {
+    left: -200%;
+}
+
+75% {
+    left: -300%;
+}
+
+95% {
+    left: -300%;
+}
+
+100% {
+    left: -400%;
+
+}
+}
+
+
+#slider {
+    overflow: hidden;
+    z-index: 0;
+}
+
+#slider figure img {  
+    height: 20%;
+    float: left;
+    z-index: 0;
+
+
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 10s slider infinite; 
+    z-index: 0;
+
+
+}
+.promotion{
+    position: relative;
+}
+.promosale{
+    float: left;
+    margin: auto;
+    width: 330px;
+    padding: 15px;
+}
+.promosale img{
+    padding: 14px;
+    line-height: 26px;
+
+}
+.promotiondetail{
+    position: relative;
+    margin-left: -62px;
+    margin-bottom: -15px;
+    font-family: 'Futura LT W01 Heavy',sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: strong;
+}
+.infowrapper{
+    position: relative;
+}
+.storedetail{
+    float: left;
+    font-size: 17px;
+    line-height: 26px;
+    padding: 15px;
+    width: 330px;
+    text-align: center;
+
+}
+
+.storedetail h4{
+    text-transform: uppercase;
+    font-family: Arial;
+    text-align: center;
+    font-size: 23px;
+    border-bottom: 2px solid #d2d7da;
+
+}
+
+
+
+
+
 @keyframes title {
     0%  {background-color: #EF7126; color: #F9E559;}
     25%  {background-color: #6F3662; color: #FFFFFF;}
@@ -78,27 +205,10 @@ h1{
     animation: title 6s ease-in infinite;
 
 }
-.wrap{
-    max-width: 1000px;
-    margin: auto;
-}
 
-.col{
-    width: 33.3333333%;
-    position: relative; 
-    float: left;
-    padding: 15px;
-}
-.gallery{
-    padding: 1px;
-    cursor: not-allowed;
-    overflow: hidden;
-}
-.gallery img{
-    max-height: 170px;
-    vertical-align: middle;
-    transition: opacity 0.5s linear;
-}
+
+
+
 .creditname{
     width: 100px;
     height: 50px;
