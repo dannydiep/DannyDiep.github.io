@@ -63,7 +63,7 @@ body{
 	overflow: hidden;
 }
 .gallery img{
-	max-height: 300px;
+	max-height: 500px;
 	vertical-align: middle;
 	transition: opacity 0.5s linear;
 }

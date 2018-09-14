@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 .wrap{
     max-width: 1000px;
     margin: auto;
@@ -13,7 +14,6 @@
     text-transform: uppercase;
     line-height: 35px;
     height: 40px;
-    font-family: arial;
 }
 .menu a:link{
     text-decoration: none;
@@ -40,44 +40,44 @@
 
 @keyframes slider {
 
-0% {
-    left: 0;
-}
+    0% {
+        left: 0;
+    }
 
-20% {
-    left: 0;
-}
+    20% {
+        left: 0;
+    }
 
-25% {
-    left: -100%;
-}
+    25% {
+        left: -100%;
+    }
 
-45% {
-    left: -100%;
+    45% {
+        left: -100%;
 
-}
+    }
 
-50% {
+    50% {
         left: -200%;
 
-}
+    }
 
-70% {
-    left: -200%;
-}
+    70% {
+        left: -200%;
+    }
 
-75% {
-    left: -300%;
-}
+    75% {
+        left: -300%;
+    }
 
-95% {
-    left: -300%;
-}
+    95% {
+        left: -300%;
+    }
 
-100% {
-    left: -400%;
+    100% {
+        left: -400%;
 
-}
+    }
 }
 
 
@@ -103,8 +103,6 @@
     font-size: 0;
     animation: 10s slider infinite; 
     z-index: 0;
-
-
 }
 .promotion{
     position: relative;
@@ -166,61 +164,77 @@
     from {
         left: 950px;
         opacity: 1;}
-    to {
-        left: 460px;
-        opacity: 0;}
-    0%  {color: green;}
-    15%  {color: pink;}
-    25%  {color: red;}
-    40%  {color: gray;}
-    50%  {color: orange;}
-    60%  {color: green;}
-    75%  {color: purple;}
-    90%  {color: red;}
-    100% {color: blue;}
-}
-@keyframes movecredit {
-    from {
-        left: 10px;
-        opacity: 0;}
-    to {
-        left: 395px;
-        opacity: 1;}
-    0%  {color: green;}
-    15%  {color: pink;}
-    25%  {color: red;}
-    40%  {color: gray;}
-    50%  {color: orange;}
-    60%  {color: green;}
-    75%  {color: purple;}
-    90%  {color: red;}
-    100% {color: blue;}
-}
+        to {
+            left: 460px;
+            opacity: 0;}
+            0%  {color: green;}
+            15%  {color: pink;}
+            25%  {color: red;}
+            40%  {color: gray;}
+            50%  {color: orange;}
+            60%  {color: green;}
+            75%  {color: purple;}
+            90%  {color: red;}
+            100% {color: blue;}
+        }
+        @keyframes movecredit {
+            from {
+                left: 10px;
+                opacity: 0;}
+                to {
+                    left: 395px;
+                    opacity: 1;}
+                    0%  {color: green;}
+                    15%  {color: pink;}
+                    25%  {color: red;}
+                    40%  {color: gray;}
+                    50%  {color: orange;}
+                    60%  {color: green;}
+                    75%  {color: purple;}
+                    90%  {color: red;}
+                    100% {color: blue;}
+                }
 
-h1{
-    font-size: 30px;
-    text-align: center;
-    font-family: Arial;
-    text-transform: uppercase;
-    animation: title 6s ease-in infinite;
+                h1{
+                    font-size: 30px;
+                    text-align: center;
+                    font-family: Arial;
+                    text-transform: uppercase;
+                    animation: title 6s ease-in infinite;
 
-}
-
-
+                }
 
 
-.creditname{
-    width: 100px;
-    height: 50px;
-    font-weight: bold;
-    position: relative;
-    animation: movename 5s ease-in infinite;
-}
-.credit{
-    width: 100px;
-    height: 50px;
-    font-weight: bold;
-    position: relative;
-    animation: movecredit 5s ease-in infinite;
-}
+
+
+                .creditname{
+                    width: 100px;
+                    height: 50px;
+                    font-weight: bold;
+                    position: relative;
+                    animation: movename 5s ease-in infinite;
+                }
+                .credit{
+                    width: 100px;
+                    height: 50px;
+                    font-weight: bold;
+                    position: relative;
+                    animation: movecredit 5s ease-in infinite;
+                }
+
+                i{
+                    color: #786B8C;
+                    text-shadow: 1px 3px 2px #000;
+                    right: 30px;
+                    bottom: 30px;
+                    position: fixed;
+                }
+                #facebook{
+                    color: #528ED4;
+                    text-shadow: 1px 3px 2px #000;
+                    right: 30px;
+                    top: 30px;
+                    position: fixed;
+                }
+
 
