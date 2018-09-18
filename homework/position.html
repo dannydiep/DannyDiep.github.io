@@ -1,35 +1,193 @@
 <html>
 <head>
-    <title>Clock Position</title>
-    <meta charset="utf-8" />
+	<title>Clock Position</title>
+	<meta charset="utf-8" />
 
-    <style>
+	<style>
 
-    body, html{
-        width: 100%
-    }
-    .clocklayer1{
-        width: 80%;
-        border-radius: 50%;
-        position:relative;
-    }
-    .clocklayer2{
-        width: 65%;
+	.clocklayer1{
+		width: 800px;
+		height: 800px;
+		background-color: green;
+		border-radius: 50%;
+		position:relative;
+	}
+	.clocklayer2{
+		width: 640px;
+		height: 640px;
+		background-color: lightblue;
+		border-radius: 50%;
+		position: absolute;
+		left: 10%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+	}
 
-        border-radius: 50%;
-        position: absolute;
-    }
+	.center{
+		width: 20px;
+		height: 20px;
+		background-color: red;
+		border-radius: 50%;
+		position: absolute;
+		left: 49%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+	}
+	.clocklayer3a{
+		width: 192px;
+		height: 192px;
+		background-color: purple;
+		border-radius: 50%;
+		position: absolute;
+		left: 10%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+		z-index: 0;
+
+	}
+
+	.clocklayer3b{
+		width: 192px;
+		height: 192px;
+		background-color: purple;
+		border-radius: 50%;
+		position: absolute;
+		left: 60%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+		z-index: 0;
+
+	}
+
+	.clocklayer3c{
+		width: 192px;
+		height: 192px;
+		background-color: purple;
+		border-radius: 50%;
+		position: absolute;
+		left: 35%;
+		transform:translateX(-50%);
+		top: 75%;
+		transform:translateY(-50%);
+		z-index: 0;
+
+	}
+
+	.clocklayer4a{
+		width: 153.6px;
+		height: 153.6px;
+		background-color: yellow;
+		border-radius: 50%;
+		position: absolute;
+		left: 10%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+		z-index: 0;
+
+	}
+
+	.clocklayer4b{
+		width: 153.6px;
+		height: 153.6px;
+		background-color: yellow;
+		border-radius: 50%;
+		position: absolute;
+		left: 10%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+		z-index: 0;
+
+	}
+
+	.clocklayer4c{
+		width: 153.6px;
+		height: 153.6px;
+		background-color: yellow;
+		border-radius: 50%;
+		position: absolute;
+		left: 10%;
+		transform:translateX(-50%);
+		top: 50%;
+		transform:translateY(-50%);
+		z-index: 0;
+	}
+	.longindicator{
+		height: 320px;
+		width: 3px;
+		transform: translate(-35%, -50%) rotate(40deg);
+		background-color: red;
+		position: absolute;
+		left: 63%;
+		transform:;
+		top: 35%;
+		z-index: 1;
+	}
+	.mediumindicator{
+		height: 250px;
+		width: 6px;
+		transform: translate(-35%, -50%) rotate(20deg);
+		background-color: red;
+		position: absolute;
+		left: 56.5%;
+		top: 33%;
+		z-index: 1;
+	}
+	.shortindicator{
+		height: 200px;
+		width: 8px;
+		transform: translate(-35%, -50%) rotate(130deg);
+		background-color: red;
+		position: absolute;
+		left: 59.5%;
+		top: 58%;
+		z-index: 1;
+	}
+
+
 </style>
 
 </head>
 <body>
-<div>
-    <img src="clock.png" class="clocklayer1">
-    <div>
-            <img src="circle.png" class="clocklayer2">
+	<div class="clocklayer1">
+		<div class="clocklayer2">
+			<div class="longindicator">
+			</div>    
+			<div class="mediumindicator">
+			</div>   
+			<div class="shortindicator">
+			</div>    
+			
+			<div class="clocklayer3a">
+				<div class="clocklayer4a">
+					<div class="tinyindicator4a">	
+					</div>
+				</div>
 
-    </div>
-</div>
+			</div>
+			<div class="clocklayer3b">
+				<div class="clocklayer4b">
+					<div class="tinyindicator4b">	
+					</div>
+				</div>
+
+			</div>
+			<div class="clocklayer3c">
+				<div class="clocklayer4c">
+					<div class="tinyindicator4c">	
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="center">
+		</div> 
+	</div>
 
 
 </body>
