@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Green Dinosaur</title>
+	<meta charset="utf-8" />
+
+	<link href="quiz.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="quizContainer" class="container">
+		<div class="title"> Dinosaur Show</div>
+		<div id="question" class="question"></div>
+		<label class="option"><input type="radio" name="option" value="1"/> <span id="luachon1"></span></label>
+		<label class="option"><input type="radio" name="option" value="2"/> <span id="luachon2"></span></label>
+		<label class="option"><input type="radio" name="option" value="3"/> <span id="luachon3"></span></label>
+		<label class="option"><input type="radio" name="option" value="4"/> <span id="luachon4"></span></label>
+		<button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question </button>
+		
+	</div>
+	<div id="result" class="container result" style="display: none;">
+	</div>
+
+	<script src="question.js" ></script>
+	<script src="quizscript.js" ></script>
+
+</body>
+</html>
