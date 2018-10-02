@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Memory Card</title>
+  <meta charset="utf-8" />
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body{
+      background-image: url("https://images.pexels.com/photos/450066/pexels-photo-450066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    }
+    .wrap{
+      position: relative;
+      margin: auto;
+      padding: 15px;
+      max-width: 1265px;
+      max-height: 616px;
+      height: 100%;
+
+    }
+    .content{
+      position: relative;
+      overflow: auto;
+    }
+
+    .grid {
+      padding: 10px;
+      float: left;
+    }
+
+    .card {
+      position: relative;
+    }
+
+    .card .back {
+       transform: rotateY(180deg);
+       position: absolute;
+       top: 0;
+       left:0;
+    }
+    .card:hover .front{
+       transform: scale(0.97);
+       overflow: hidden;
+    }
+
+    .card .front,
+    .card .back {
+      transition: all 0.7s;
+      backface-visibility: hidden;
+    }
+
+    .flipped .back{
+    transform: rotateY( 0deg );
+    }
+    .flipped .front{
+    transform: rotateY( 180deg );
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="content">
+      <div class="grid">
+
+        <div class="card">
+          <div class="front">
+            <img src="image/main.jpg">
+          </div>
+          <div class="back">
+            <img src="image/1.jpg">
+          </div>
+
+        </div>
+        <div class="card">
+          <div class="front">
+            <img src="image/main.jpg">
+          </div>
+          <div class="back">
+            <img src="image/2.jpg">
+          </div>
+        </div>
+
+        <div class="card">
+
+          <div class="front">
+            <img src="image/main.jpg">
+          </div>
+          <div class="back">
+            <img src="image/3.jpg">
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="front">
+            <img src="image/main.jpg">
+          </div>
+          <div class="back">
+            <img src="image/4.jpg">
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="front">
+            <img src="image/main.jpg">
+          </div>
+          <div class="back">
+            <img src="image/5.jpg">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="memory.js"></script>
+
+</body>
+
+</html>
