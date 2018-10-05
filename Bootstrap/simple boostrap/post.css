@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Andika');
+body {
+    position: relative;
+    font-family: Andika;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+.wrap{
+    max-width: 1000px;
+    margin: auto;
+}
+.menu {
+    list-style-type: none;
+    padding: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 35px;
+    height: 40px;
+    font-family: arial;
+}
+.menu a:link{
+    text-decoration: none;
+    padding: 10px;
+    color: #3e3e3e;
+}
+.menu a:hover{
+    background-color: #786B8C;
+}
+.menu > li {
+    float: left;
+
+}
+.menu > li > ul {
+    list-style-type: none;
+    display: none;
+
+}
+.menu > li:hover > ul {
+    display: block;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+a #source{
+    font-style: italic;
+    color: #b50937;
+    text-decoration: none;
+}
+.linkh1{
+     position: absolute;
+     z-index: 0;
+}
+#imgdetails{
+    color: #444;
+    font-size: 15px;
+    margin-left: 10px;
+    font-style: italic;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "myriad-pro",Freesans,Helmet,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+}
+.infowrapper{
+    position: relative;
+}
+.storedetail{
+    float: left;
+    font-size: 17px;
+    line-height: 26px;
+    padding: 15px;
+    width: 330px;
+
+}
+
+.storedetail h4{
+    text-transform: uppercase;
+    font-family: Arial;
+    text-align: left;
+    font-size: 23px;
+    border-bottom: 2px solid #d2d7da;
+
+}
+@keyframes movename {
+    from {
+        left: 950px;
+        opacity: 1;}
+    to {
+        left: 460px;
+        opacity: 0;}
+    0%  {color: green;}
+    15%  {color: pink;}
+    25%  {color: red;}
+    40%  {color: gray;}
+    50%  {color: orange;}
+    60%  {color: green;}
+    75%  {color: purple;}
+    90%  {color: red;}
+    100% {color: blue;}
+}
+@keyframes movecredit {
+    from {
+        left: 10px;
+        opacity: 0;}
+    to {
+        left: 395px;
+        opacity: 1;}
+    0%  {color: green;}
+    15%  {color: pink;}
+    25%  {color: red;}
+    40%  {color: gray;}
+    50%  {color: orange;}
+    60%  {color: green;}
+    75%  {color: purple;}
+    90%  {color: red;}
+    100% {color: blue;}
+}
+
+
+
+.creditname{
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    animation: movename 5s ease-in infinite;
+}
+.credit{
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    animation: movecredit 5s ease-in infinite;
+}
+
