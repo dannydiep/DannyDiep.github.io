@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Register Form</title>
+	<meta charset="utf-8" />
+
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-image: url("https://images.pexels.com/photos/450066/pexels-photo-450066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+		}
+		form{
+			margin-left: 20px;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<h1>Registration Form</h1>
+
+		<form action="result.html" method="GET">
+			<input type="text" id="email" name="email" placeholder="Email address" /></br>
+			<input type="password" name="password" placeholder="Password" /></br>
+			<input type="text" id="name" name="name" placeholder="Full name" /></br>
+			<input type="date" id="bday" name="bday">
+			</br>
+			<input type="radio" name="gender" id="male" /><label for="male">Male</label>
+			<input type="radio" name="gender" id="female" /><label for="female">Female</label>
+			</br>
+			<input type="text" name="address" placeholder="Home address" /></br>
+			<input type="telephone" name="telephone" placeholder="telephone" /></br>
+			</br>
+			<input type="submit" class="button" value="Register">
+
+		</form>
+	</div>
+
+
+
+	<script language="Javascript">
+
+		$('.button').each(function(i, el){
+    	$(this).attr({
+        href: $(this).attr("href") + window.location.search
+    });
+});
+
+	</script>
+</body>
+
+</html>

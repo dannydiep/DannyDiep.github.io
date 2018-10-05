@@ -1,23 +1,21 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css?family=Andika');
+body {
+    position: relative;
+    font-family: Andika;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+}
 .wrap{
-	max-width: 1000px;
-	margin: auto;
+    max-width: 1000px;
+    margin: auto;
 }
-body{
-    background-color: ##F2EAFE;
-    background-image: url("https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-
-}
-
-
 .menu {
-    
     list-style-type: none;
     padding: 3px;
-    background-color: ##F2EAFE;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 35px;
@@ -32,57 +30,53 @@ body{
 .menu a:hover{
     background-color: #786B8C;
 }
-
 .menu > li {
     float: left;
-    position: relative;
-    z-index: 1;
+
 }
 .menu > li > ul {
     list-style-type: none;
     display: none;
+
 }
 .menu > li:hover > ul {
     display: block;
-    position: absolute;
+    z-index: 1;
     margin: 0;
     padding: 0;
-}
-
-
-.col{
-	width: 33.3333333%;
-	position: relative;	
-	float: left;
-	padding: 15px;
-}
-.gallery{
-	padding: 1px;
-	cursor: not-allowed;
-	overflow: hidden;
-}
-.gallery img{
-	max-height: 500px;
-	vertical-align: middle;
-	transition: opacity 0.5s linear;
-}
-.gallery:hover img{
-	opacity: 0.6;
-	transform: scale(1.5);
-}
-
-.fooddescription{
-    margin-top: 5px;
-    font-family: 'GT-Walsheim-Bold';
-    font-weight: bold;
     position: relative;
-}
-.holdallimage{
-    z-index: 0;
+
 }
 
+a #source{
+    font-style: italic;
+    color: #b50937;
+    text-decoration: none;
+}
+.linkh1{
+     position: absolute;
+     z-index: 0;
+}
+#imgdetails{
+    color: #444;
+    font-size: 15px;
+    margin-left: 10px;
+    font-style: italic;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "myriad-pro",Freesans,Helmet,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
 
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
+}
 .infowrapper{
     position: relative;
 }
@@ -103,25 +97,6 @@ body{
     border-bottom: 2px solid #d2d7da;
 
 }
-
-
-
-.creditname{
-	width: 100px;
-    height: 50px;
-    font-weight: bold;
-    position: relative;
-    animation: movename 5s ease-in infinite;
-}
-.credit{
-	width: 100px;
-    height: 50px;
-    font-weight: bold;
-    position: relative;
-    animation: movecredit 5s ease-in infinite;
-}
-
-
 @keyframes movename {
     from {
         left: 950px;
@@ -156,3 +131,21 @@ body{
     90%  {color: red;}
     100% {color: blue;}
 }
+
+
+
+.creditname{
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    animation: movename 5s ease-in infinite;
+}
+.credit{
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    animation: movecredit 5s ease-in infinite;
+}
+

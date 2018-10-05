@@ -22,9 +22,36 @@
 		height: 100%;
 
 	}
+	.timer {
+		position: relative;
+		padding: 10px;
+		margin: 20px auto;
+		max-width: 1265px;
+		overflow: auto;
+		z-index: 9;
+	}
+
+	.timer .progressbar {
+		float: left;
+		width: 100%;
+	}
+
+	.timer .progressbar progress {
+		width: 100%;
+	}
+
+	progress {
+    -webkit-appearance: progress-bar;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1em;
+    width: 10em;
+    vertical-align: -0.2em;
+	}
 	.content{
 		position: relative;
 		overflow: auto;
+		z-index: 2;
 	}
 
 	.grid {
@@ -60,6 +87,7 @@
 		transform: rotateY( 180deg );
 	}
 
+
 </style>
 
 </head>
@@ -72,6 +100,13 @@
 			<source src="audio/incorrect.mp3" type="audio/mpeg">
 			</audio>
 			<div class="wrap">
+
+				<div class="timer">
+					<div class="progressbar" style="display: none;">
+						<progress max="100" value="100"></progress>
+					</div>
+				</div>
+				
 				<div class="content">
 					<div class="grid">
 

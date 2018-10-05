@@ -2,7 +2,9 @@ var cards= ['1','2','3','4','5'];
 var current= null;
 var isPlaying = false;
 var count = 0;
-var remainingTime = 75;
+var normalTime = 75;
+var maxTime = remainingTime = normalTime;
+var running = null;
 
 function shuffle(array){
 	var currentIndex = array.length, temporaryValue, randomIndex;
@@ -26,6 +28,12 @@ function playSound(type) {
     document.getElementById(type + '-sound').load();
     document.getElementById(type + '-sound').play();
 }
+
+
+    // Start progressbar
+    remainingTime = maxTime;
+    $('.progressbar').css('display', 'block');
+    $('progress').val(100);
 
 function flip(card) {
 	console.log(card);
@@ -79,6 +87,10 @@ $(function() {
 	cards = cards.concat(cards);
 
 
+	// Reset progressbar
+	$('.progressbar').css('display', 'none');
+
+
 	//shuffle cards' position
 	cards = shuffle(cards);
 
@@ -94,18 +106,33 @@ $(function() {
 	$('.content').html(html);
 
 
-	var run = setInterval(function(){
+	 running = setInterval(function(){
 		remainingTime--;
 		console.log(remainingTime);
+
+		$('progress').val(remainingTime / maxTime * 100);
 
 		//run out of time
 		if (remainingTime == 0){
 		//game over
-		clearInterval(run);
+		//clearInterval(run);
 		alert("Game over!");
+		stopGame();
 		}
 	}, 1000);
 });
+
+
+function stopGame() {
+    isPlaying = false;
+
+    if (running != null) {
+        clearInterval(running);
+        running = null;
+    }
+    
+    $('.card').css('pointer-events', 'none');
+}
 
 
     // Start game
