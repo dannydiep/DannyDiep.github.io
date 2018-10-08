@@ -4,6 +4,8 @@
 	margin: 0;
 	padding: 0;
 }
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
 
 body {
 	background-image: url("");
@@ -18,16 +20,16 @@ form{
 	margin-left: 10px;
 }
 .navbar-collapse {
-	background-color: #d6f9c4;
+	background-color: #9fdf7d;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,.5);
+    color: #7a6666;
     font-weight: bold;
-    font-size: 13px;
-	border-right: 1px solid;
+    font-size: 15px;
+	text-transform: uppercase;
 }
 .bg-light {
-    background-color: #d6f9c4!important;
+    background-color: #9fdf7d!important;
 }
 img{
 	width: 100%;
@@ -42,4 +44,20 @@ img{
 .col-xs-6:hover img, .col-sm-6:hover img, .col-md-3:hover img{
 	opacity: 0.95;
 	transform: scale(0.9);
+}
+
+h3{
+	border-bottom: 3px solid #9fdf7d;
+}
+h2{
+	font-size: 32px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #454545;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+.info{
+	font-size: 16px;
 }
