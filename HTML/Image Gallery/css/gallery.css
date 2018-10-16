@@ -45,6 +45,9 @@ h1{
 	width: 100%;
 	height: auto;
 }
+img:hover{
+	border-radius: 15px;
+}
 .imageTitle{
 	padding: 5px;
 	text-align: center;
