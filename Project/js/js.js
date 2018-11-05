@@ -1,42 +1,82 @@
+//Count up
+(function ($) {
+        $.fn.countTo = function (options) {
+            options = options || {};
 
+            return $(this).each(function () {
+                var settings = $.extend({}, $.fn.countTo.defaults, {
+                    from:            $(this).data('from'),
+                    to:              $(this).data('to'),
+                    speed:           $(this).data('speed'),
+                    refreshInterval: $(this).data('refresh-interval'),
+                    decimals:        $(this).data('decimals')
+                }, options);
 
-(function($) {
-  // defaults
-  $.fn.js = function(options) {
-    var settings = $.extend({
-      current: 0,
-      images: [],
-      transitionTime: 1000,
-      wait: 3000,
-      static: false
-    }, options);
+                var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                    increment = (settings.to - settings.from) / loops;
 
-    // preload images
-    var i, end;
-    for (i = 0, end = settings.images.length; i < end; ++i) {
-        new Image().src = settings.images[i];
-    }
+                var self = this,
+                    $self = $(this),
+                    loopCount = 0,
+                    value = settings.from,
+                    data = $self.data('countTo') || {};
 
-    // sort out the transitions + specify vendor prefixes
-    $('.fullBackground')
-      .css('background-image', 'url(' + settings.images[settings.current] + ')')
-      .css('-webkit-transition', 'background ' + settings.transitionTime + 's ease-in-out')
-      .css('-moz-transition', 'background ' + settings.transitionTime + 'ms ease-in-out')
-      .css('-ms-transition', 'background ' + settings.transitionTime + 'ms ease-in-out')
-      .css('-o-transition', 'background ' + settings.transitionTime + 'ms ease-in-out')
-      .css('transition', 'background ' + settings.transitionTime + 'ms ease-in-out')
+                $self.data('countTo', data);
+                if (data.interval) {
+                    clearInterval(data.interval);
+                }
+                data.interval = setInterval(updateTimer, settings.refreshInterval);
+                render(value);
+                function updateTimer() {
+                    value += increment;
+                    loopCount++;
+                    render(value);
+                    if (typeof(settings.onUpdate) == 'function') {
+                        settings.onUpdate.call(self, value);
+                    }
+                    if (loopCount >= loops) {
+                        // remove the interval
+                        $self.removeData('countTo');
+                        clearInterval(data.interval);
+                        value = settings.to;
 
-    // if only one image, set as static background
-    if (settings.static) {
-      $(this)
-      .css('background-image', 'url(' + settings.images[settings.current] + ')');
-      return;
-    }
+                        if (typeof(settings.onComplete) == 'function') {
+                            settings.onComplete.call(self, value);
+                        }
+                    }
+                }
+                function render(value) {
+                    var formattedValue = settings.formatter.call(self, value, settings);
+                    $self.html(formattedValue);
+                }
+            });
+        };
+        $.fn.countTo.defaults = {
+            from: 0,             
+            to: 0,            
+            speed: 1000,         
+            refreshInterval: 100,  
+            decimals: 0,           
+            formatter: formatter,  
+            onUpdate: null,        
+            onComplete: null       
+        };
+        function formatter(value, settings) {
+            return value.toFixed(settings.decimals);
+        }
+    }(jQuery));
 
-    // change the background image
-    (function update() {
-      settings.current = (settings.current + 1) % settings.images.length;
-        $('.fullBackground').css('background-image', 'url(' + settings.images[settings.current] + ')');
-        setTimeout(update, settings.wait);
-    }());
-}}(jQuery));
+    jQuery(function ($) {
+      // custom formatting example
+      $('.count-number').data('countToOptions', {
+        formatter: function (value, options) {
+          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+        }
+      });
+      $('.timer').each(count);  
+      function count(options) {
+        var $this = $(this);
+        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        $this.countTo(options);
+      }
+    });
