@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+
+/* day la phan header */
+header{
+    display: flex;
+    margin-bottom: 5px;
+
+}
+header #header_logo{
+    width: 20%;
+    background: green;
+    text-align: center;
+    padding: 10px;
+}
+
+header #header_search{
+    width: 60%;
+    background: blue;
+    text-align: center;
+    padding: 10px;
+}
+
+header #header_mxh{
+    width: 20%;
+    background: red;
+    text-align: center;
+    padding: 10px;
+}
+
+/* finish header */
+
+
+
+/* start Menu */
+nav{
+    margin-bottom: 5px;
+}
+nav ul{
+    display: flex;
+    background:plum; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li{
+    color: yellow;
+    padding: 10px;
+}
+
+/* finish menu */
+
+
+
+/* start main */
+section{
+    display: flex;
+}
+
+section .left{
+    background: red;
+    width: 20%;
+    margin-bottom: 5px;
+}
+section .left ul{
+    font-size: 14px;
+}
+
+section .center{
+    width: 60%;
+}
+
+section .center img, section .right img{
+    width: 100%;
+}
+
+section .right{
+    height: 300px;
+    width: 20%;
+}
+section .right .search{
+    display: flex;
+    padding: 5px;
+}
+
+section .right .search input{
+    width: 100%;
+}
+
+section .right iframe{
+    width: 100%;
+    height: 100px;
+}
+
+footer{
+    display: flex;
+}
+footer .footer_logo{
+    width: 20%;
+    background: green;
+
+}
+footer .infomation-left{
+    width: 30%;
+    background: blue;
+
+}
+footer .infomation-right{
+    background: yellow;
+    width: 30%;
+}
+footer .footer_time{
+    width: 20%;
+    background: red;
+
+}
+
+
+
