@@ -38,6 +38,7 @@ nav{
     margin-bottom: 5px;
 }
 nav ul{
+    position: relative;
     display: flex;
     background:plum; 
     list-style: none;
@@ -49,9 +50,28 @@ nav ul{
 nav ul li{
     color: yellow;
     padding: 10px;
+    /* float: left; */
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+
+
+nav ul li ul{
+    display:none;
+}
+nav ul li .sub_menu{
+    position: absolute;
+}
+
+nav ul li:hover ul {
+    display: block;
 }
 
 /* finish menu */
+
 
 
 
@@ -71,6 +91,7 @@ section .left ul{
 
 section .center{
     width: 60%;
+    margin: 0 5px 0 5px;
 }
 
 section .center img, section .right img{
@@ -84,15 +105,17 @@ section .right{
 section .right .search{
     display: flex;
     padding: 5px;
+    margin-left: 10px;
 }
 
 section .right .search input{
-    width: 100%;
+    width: 70%;
+    margin-right: 5px;
 }
 
 section .right iframe{
     width: 100%;
-    height: 100px;
+    height: 300px;
 }
 
 footer{
